@@ -20,18 +20,28 @@ import org.json.JSONObject;
  * Created by karee on 8/25/2017.
  */
 
-public class JSONparse extends AsyncTask<Object, Object, String>  {
+public class GetJSON extends AsyncTask<Object, Object, String> {
     public AsyncResponse delegate = null;
+    private String url;
+
+    GetJSON(String s){
+        url = s;
+    }
 
     @Override
     protected String doInBackground(Object... v) {
         JSONObject json;
+        String s;
+
         try {
-            json = readJsonFromUrl("https://api.blockchain.info/stats");
+            json = readJsonFromUrl(url);
+            s = json.toString();
         } catch (Exception e){
-            return "rip";
+            s = "fail";
         }
-        return (json.toString());
+
+        return s;
+
     }
 
     private static String readAll(Reader rd) throws IOException {
@@ -48,15 +58,13 @@ public class JSONparse extends AsyncTask<Object, Object, String>  {
         try {
             BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
             String jsonText = readAll(rd);
-            JSONObject json = new JSONObject(jsonText);
-            return json;
+            return new JSONObject(jsonText);
         } finally {
             is.close();
         }
     }
 
     protected void onPostExecute(String result) {
-
         delegate.processFinish(result);
     }
 

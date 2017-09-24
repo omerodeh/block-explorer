@@ -17,26 +17,28 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/image"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:scaleType="centerCrop" />
+            android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/description"
+                android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/image"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingTop="5dp"
                 android:textColor="@color/cardview_dark_background"
-                android:text="test"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="100dp"
+                android:textColor="@color/cardview_dark_background"
                 android:textSize="12sp"
                 android:textStyle="normal"
                 android:typeface="sans" />

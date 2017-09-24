@@ -13,15 +13,15 @@ import android.widget.Toast;
  * Created by User on 2/28/2017.
  */
 
-public class Tab2Fragment extends Fragment {
-    private static final String TAG = "Tab2Fragment";
+public class Tab2Frag extends Fragment {
+    private static final String TAG = "Tab2Frag";
 
     private Button btnTEST;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.tab2_fragment,container,false);
+        View view = inflater.inflate(R.layout.tab2_frag,container,false);
         btnTEST = (Button) view.findViewById(R.id.btnTEST2);
 
         btnTEST.setOnClickListener(new View.OnClickListener() {
