@@ -24,8 +24,7 @@ public class Tab1Frag extends Fragment implements AsyncResponse{
     private ProgressBar mProgressBar;
     private GridLayoutManager gridLayoutManager;
     private ViewAdapter adapter;
-    List<Statistic> data = new ArrayList<Statistic>();
-    String jss;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
