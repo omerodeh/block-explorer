@@ -14,6 +14,7 @@ public class Statistic {
     private int id;
     private String value;
 
+    //Constructor parses from json
     Statistic(String json) {
 
         int index = json.indexOf(":");

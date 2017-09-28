@@ -11,6 +11,7 @@
         android:layout_gravity="center"
         android:elevation="3dp"
         card_view:cardUseCompatPadding="true"
+        card_view:cardBackgroundColor="#FFE0B2"
         card_view:cardElevation="4dp"
         card_view:cardCornerRadius="1dp"
        >
@@ -26,9 +27,10 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingTop="5dp"
-                android:textColor="@color/cardview_dark_background"
-                android:textSize="24sp"
+                android:textColor="#E65100"
+                android:textSize="30sp"
                 android:textStyle="normal"
+                android:gravity="center"
                 android:typeface="sans" />
 
             <TextView
@@ -37,9 +39,9 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:paddingTop="100dp"
-                android:textColor="@color/cardview_dark_background"
-                android:textSize="12sp"
+                android:paddingTop="70dp"
+                android:textColor="#EF6C00"
+                android:textSize="18sp"
                 android:textStyle="normal"
                 android:typeface="sans" />
 
